@@ -4,8 +4,8 @@
  *
  * @since      1.0.0
  *
- * @package    ReactCrudPlugin
- * @subpackage ReactCrudPlugin/includes/Admin
+ * @package    Ganesh
+ * @subpackage CRUD\Admin
  */
 
 namespace Ganesh\CRUD\Admin;
@@ -15,8 +15,8 @@ namespace Ganesh\CRUD\Admin;
  *
  * Defines all actions and filters for the plugin.
  *
- * @package    ReactCrudPlugin
- * @subpackage ReactCrudPlugin/includes/Admin
+ * @package    Ganesh
+ * @subpackage CRUD\Admin
  */
 class Loader {
 

@@ -6,8 +6,8 @@
  * so that it is ready for translation.
  *
  * @since      1.0.0
- * @package    React_CRUD_Plugin
- * @subpackage React_CRUD_Plugin/includes
+ * @package    Ganesh
+ * @subpackage CRUD
  */
 
 namespace Ganesh\CRUD;
@@ -19,8 +19,8 @@ namespace Ganesh\CRUD;
  * so that it is ready for translation.
  *
  * @since      1.0.0
- * @package    React_CRUD_Plugin
- * @subpackage React_CRUD_Plugin/includes
+ * @package    Ganesh
+ * @subpackage CRUD
  */
 class I18n {
 

@@ -11,7 +11,7 @@
  * Text Domain: react-crud-plugin
  * Domain Path: /languages
  *
- * @package ReactCrudPlugin
+ * @package Ganesh
  */
 
 if ( ! defined( 'WPINC' ) ) {

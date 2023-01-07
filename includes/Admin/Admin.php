@@ -5,8 +5,8 @@
  * Defines the plugin name, version, and two examples hooks for how to
  * enqueue the admin-specific stylesheet and JavaScript.
  *
- * @package    React_CRUD_Plugin
- * @subpackage React_CRUD_Plugin/admin
+ * @package    Ganesh
+ * @subpackage CRUD\Admin
  */
 
 namespace Ganesh\CRUD\Admin;
@@ -17,8 +17,8 @@ namespace Ganesh\CRUD\Admin;
  * Defines the plugin name, version, and two examples hooks for how to
  * enqueue the admin-specific stylesheet and JavaScript.
  *
- * @package    React_CRUD_Plugin
- * @subpackage React_CRUD_Plugin/admin
+ * @package    Ganesh
+ * @subpackage CRUD\Admin
  */
 class Admin {
 

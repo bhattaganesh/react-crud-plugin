@@ -10,8 +10,8 @@
  *
  * @since      1.0.0
  *
- * @package    ReactCrudPlugin
- * @subpackage ReactCrudPlugin/includes
+ * @package    Ganesh
+ * @subpackage CRUD
  */
 
 namespace Ganesh\CRUD;
@@ -29,8 +29,8 @@ use Ganesh\CRUD\Admin\Admin;
  * Also maintains the unique identifier of this plugin as well as the current
  * version of the plugin.
  *
- * @package    ReactCrudPlugin
- * @subpackage ReactCrudPlugin/includes
+ * @package    Ganesh
+ * @subpackage CRUD
  */
 final class ReactCrudPlugin {
 
