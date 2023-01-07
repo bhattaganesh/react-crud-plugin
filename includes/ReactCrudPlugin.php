@@ -216,6 +216,9 @@ final class ReactCrudPlugin {
 
 		$this->loader->add_action( 'admin_enqueue_scripts', $this->admin, 'enqueue_styles' );
 		$this->loader->add_action( 'admin_enqueue_scripts', $this->admin, 'enqueue_scripts' );
+
+		// Register custom REST API endpoint.
+		$this->loader->add_action( 'rest_api_init', $this->admin, 'init_api_endpoint' );
 	}
 
 	/**

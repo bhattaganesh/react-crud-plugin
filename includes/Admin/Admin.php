@@ -11,6 +11,8 @@
 
 namespace Ganesh\CRUD\Admin;
 
+use Ganesh\CRUD\Admin\API;
+
 /**
  * The admin-specific functionality of the plugin.
  *
@@ -90,5 +92,15 @@ class Admin {
 	 */
 	public function display_admin_menu_page() {
 		include_once dirname( __FILE__ ) . '/partials/react-crud-plugin-admin-display.php';
+	}
+
+	/**
+	 * Initialize the REST API endpoint for the plugin.
+	 *
+	 * @since    1.0.0
+	 */
+	public function init_api_endpoint() {
+		$api = new API();
+		$api->register_routes();
 	}
 }
