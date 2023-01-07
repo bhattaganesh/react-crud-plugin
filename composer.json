@@ -1,0 +1,21 @@
+{
+  "name": "ganesh/react-crud-plugin",
+  "description": "A modern WordPress plugin to perform CRUD operations.",
+  "version": "1.0.0",
+  "type": "wordpress-plugin",
+  "license": "GPL-2.0-or-later",
+  "authors": [
+    {
+      "name": "Ganesh Bhatta",
+      "email": "bhattaganesh05@gmail.com"
+    }
+  ],
+  "require": {
+    "php": ">=7.4"
+  },
+  "autoload": {
+    "psr-4": {
+      "Ganesh\\CRUD\\": "includes/"
+    }
+  }
+}
