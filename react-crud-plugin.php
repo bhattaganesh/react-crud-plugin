@@ -14,6 +14,10 @@
  * @package Ganesh
  */
 
+use Ganesh\CRUD\Activate;
+use Ganesh\CRUD\Deactivate;
+use Ganesh\CRUD\Uninstall;
+
 if ( ! defined( 'WPINC' ) ) {
 	die;
 }
@@ -23,8 +27,37 @@ if ( ! defined( 'REACT_CRUD_PLUGIN_FILE' ) ) {
 	define( 'REACT_CRUD_PLUGIN_FILE', __FILE__ );
 }
 
-// Include the autoload file.
+/**
+ * The code that runs during plugin activation.
+ *
+ * @since    1.0.0
+ */
+function react_crud_activate_plugin() {
+	Activate::activate();
+}
+register_activation_hook( __FILE__, 'react_crud_activate_plugin' );
 
+/**
+ * The code that runs during plugin deactivation.
+ *
+ * @since    1.0.0
+ */
+function react_crud_deactivate_plugin() {
+	Deactivate::deactivate();
+}
+register_deactivation_hook( __FILE__, 'react_crud_deactivate_plugin' );
+
+/**
+ * The code that runs during plugin un-installation.
+ *
+ * @since    1.0.0
+ */
+function react_crud_uninstall_plugin() {
+	Uninstall::uninstall();
+}
+register_uninstall_hook( __FILE__, 'react_crud_uninstall_plugin' );
+
+// Include the autoload file.
 if ( ! class_exists( 'ReactCrudPlugin' ) ) {
 	require_once dirname( __FILE__ ) . '/vendor/autoload.php';
 }
