@@ -1,0 +1,46 @@
+/* ItemList styles */
+.items {
+    width: 100%;
+    border-collapse: collapse;
+  }
+  
+  .items thead tr th {
+    padding: 10px;
+    background-color: #0073aa;
+    color: #fff;
+  }
+  
+  .items tbody tr td {
+    padding: 10px;
+  }
+  
+  .items tbody tr:nth-child(even) {
+    background-color: #f1f1f1;
+  }
+  
+  .items tbody tr td .button {
+    margin-right: 10px;
+  }
+  
+  .item-list {
+    width: 100%;
+    border-collapse: collapse;
+  }
+  
+  .item-list thead tr th {
+    padding: 10px;
+    background-color: #0073aa;
+    color: #fff;
+  }
+  
+  .item-list tbody tr td {
+    padding: 10px;
+  }
+  
+  .item-list tbody tr:nth-child(even) {
+    background-color: #f1f1f1;
+  }
+  
+  .item-list tbody tr td .button {
+    margin-right: 10px;
+  }

@@ -1,6 +1,8 @@
 import React from "react";
 import ReactDOM from "react-dom/client";
 import App from "./App";
+import { Provider } from "react-redux";
+import store from "./store";
 
 window.onload = () => {
   const loading = document.querySelector(".loading");
@@ -12,6 +14,10 @@ window.onload = () => {
   // Show the React app.
   if (root) {
     root.style.display = "block";
-    ReactDOM.createRoot(root).render(<App />);
+    ReactDOM.createRoot(root).render(
+      <Provider store={store}>
+          <App />
+      </Provider>
+    );
   }
 };

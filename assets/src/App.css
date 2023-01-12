@@ -1,0 +1,12 @@
+/* Other styles */
+.add {
+  float: right;
+}
+
+body .notice {
+  display: none;
+}
+
+#react-crud-plugin-admin-root .notice {
+  display: block;
+}
