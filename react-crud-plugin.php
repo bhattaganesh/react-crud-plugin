@@ -14,7 +14,6 @@
  * @package Ganesh
  */
 
-use Ganesh\CRUD\Activate;
 use Ganesh\CRUD\Deactivate;
 use Ganesh\CRUD\Uninstall;
 
@@ -26,16 +25,6 @@ if ( ! defined( 'WPINC' ) ) {
 if ( ! defined( 'REACT_CRUD_PLUGIN_FILE' ) ) {
 	define( 'REACT_CRUD_PLUGIN_FILE', __FILE__ );
 }
-
-/**
- * The code that runs during plugin activation.
- *
- * @since    1.0.0
- */
-function react_crud_activate_plugin() {
-	Activate::activate();
-}
-register_activation_hook( __FILE__, 'react_crud_activate_plugin' );
 
 /**
  * The code that runs during plugin deactivation.

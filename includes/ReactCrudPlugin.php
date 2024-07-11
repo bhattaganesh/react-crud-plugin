@@ -142,7 +142,50 @@ final class ReactCrudPlugin {
 		$this->set_locale();
 		$this->define_admin_hooks();
 
+
+		add_action('init', array($this, 'register_post_type'));
+		add_filter('template_include', array($this, 'load_templates'));
+
 		do_action( 'react_crud_plugin_loaded' );
+	}
+
+	public function register_post_type(){
+		register_post_type(
+			'react_crud_item',
+			array(
+				'label'           => 'React CRUD Items',
+				'public'          => true,
+				'show_ui'         => true,
+				'show_in_menu'    => true,
+				'capability_type' => 'post',
+				'hierarchical'    => false,
+				'rewrite'         => array( 'slug' => 'react-crud-items' ),
+				'query_var'       => true,
+				'menu_icon'       => 'dashicons-welcome-write-blog',
+				'supports'        => array(
+					'title',
+					'editor',
+					'excerpt',
+					'trackbacks',
+					'custom-fields',
+					'comments',
+					'revisions',
+					'thumbnail',
+					'author',
+					'page-attributes',
+				),
+			)
+		);
+	}
+
+	public function load_templates($template) {
+		if (is_singular('react_crud_item')) {
+			$plugin_template = REACT_CRUD_PLUGIN_DIR . 'templates/single-react-item.php';
+			if (file_exists($plugin_template)) {
+				return $plugin_template;
+			}
+		}
+		return $template;
 	}
 
 	/**
