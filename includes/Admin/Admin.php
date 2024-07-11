@@ -67,14 +67,22 @@ class Admin {
 	 * @since    1.0.0
 	 */
 	public function enqueue_scripts() {
-		wp_enqueue_script( $this->plugin_name, REACT_CRUD_PLUGIN_URI . '/assets/dist/js/admin.bundle.js', array(), $this->version, false );
+		if ( defined( 'WP_DEBUG' ) && WP_DEBUG ) {
+			$script_url = 'http://localhost:3000/assets/dist/js/admin.bundle.js';
+		} else {
+			$script_url = REACT_CRUD_PLUGIN_URI . '/assets/dist/js/admin.bundle.js';
+		}
+
+
+		wp_enqueue_script( $this->plugin_name, $script_url, array(), $this->version, true );
+
 		$data = array(
 			'nonce'   => wp_create_nonce( 'wp_rest' ),
 			'restUrl' => esc_url_raw( rest_url( 'react-crud-plugin/v1' ) ),
-
 		);
 		wp_localize_script( $this->plugin_name, 'reactCrudPluginData', $data );
 	}
+
 
 	/**
 	 * Add an admin menu page for the plugin.
